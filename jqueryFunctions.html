@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using jQuery funtions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        // select the bosdy tag and append a button.
+        //Notice how we write html text when we appnd.\
+        $("body").append("<button>Click Me</button>");
+
+
+        /*
+        Now that a button has been appened to the body, Jquery
+        can now select for the button
+        */
+       $("button").on("click", sayHello);
+
+       //set the border radius to 5px
+       $("button").css("border-radius", "5px");
+
+       //ser mutiple attributes at the same to to selected elements
+       $("button").css({"background-color":"green", "color":"white"})
+
+       function sayHello() {
+            alert("Hello There!");
+       }
+    </script>
+</body>
+</html>
